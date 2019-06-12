@@ -1,5 +1,5 @@
-export default (locale, currency) => {
-  const numberFormat = new Intl.NumberFormat(locale, { style: 'currency', currency })
+export default (locale, currency, formatOptions) => {
+  const numberFormat = new Intl.NumberFormat(locale, Object.assign({ style: 'currency', currency }, formatOptions))
   const formattedNumber = numberFormat.format(1234)
   const decimalLimit = (formattedNumber.match(/0/g) || []).length
   const decimalSymbol = decimalLimit > 0 ? formattedNumber.substr(formattedNumber.indexOf('4') + 1, 1) : null

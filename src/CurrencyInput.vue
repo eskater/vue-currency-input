@@ -62,7 +62,7 @@ export default {
       return options
     },
     currencyFormatConfig () {
-      return currencyFormatConfig(this.options.locale, this.options.currency)
+      return currencyFormatConfig(this.options.locale, this.options.currency, this.options.formatOptions)
     }
   },
   watch: {

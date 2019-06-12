@@ -4,5 +4,6 @@ export default {
   distractionFree: true,
   min: null,
   max: null,
-  validateOnInput: false
+  validateOnInput: false,
+  formatOptions: {}
 }
